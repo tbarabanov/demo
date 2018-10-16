@@ -1,0 +1,25 @@
+home page https://curl.haxx.se/docs/httpscripting.html
+
+If you use the --request / -X option you can change the method keyword curl selects, but you will not modify curl's behavior. This means that if you for example use -d "data" to do a POST, you can modify the method to a PROPFIND with -X and curl will still think it sends a POST.
+
+CREATE
+curl -X POST "http://localhost:8080/greeting" -H "Content-Type: application/json" -d "{\"content\":\"hello, world\"}"
+
+READ
+curl -X GET "http://localhost:8080/greeting" -H "Content-Type: application/json"
+
+UPDATE
+// TODO: what did we miss???
+curl -X PUT "http://localhost:8080/greeting?id=0488ecf4-a65a-4adf-8477-a19f941202bc" -H "Content-Type: application/json"
+
+DELETE
+curl -X DELETE "http://localhost:8080/greeting?id=0488ecf4-a65a-4adf-8477-a19f941202bc" -H "Content-Type: application/json"
+
+Home task
+1 Add new filed in hello.model;Greeting class. New field must contain key=value pairs to keep Greeting metadata taken from request.
+2 Change GreetingController in such a way that it can read request headers and fill in new field in hello.model;Greeting.
+3 Check that metadata is returned by 'read' request.
+4 Write/Update curl requests to pass this new data.
+5 Provide wireshark screenshots which show request/response pairs for all CRUD methods. Screenshot must contain type of request: get, post, put, delete,
+URL, headers, and body.
+6 Code, curl requests and screenshots must be uploaded on your github.
