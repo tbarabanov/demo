@@ -16,8 +16,8 @@ DELETE
 curl -X DELETE "http://localhost:8080/greeting?id=0488ecf4-a65a-4adf-8477-a19f941202bc" -H "Content-Type: application/json"
 
 Home task
-1 Add new filed in hello.model;Greeting class. New field must contain key=value pairs to keep Greeting metadata taken from request.
-2 Change GreetingController in such a way that it can read request headers and fill in new field in hello.model;Greeting.
+1 Add new filed in hello.model.Greeting class. New field must contain key=value pairs to keep Greeting metadata taken from request.
+2 Change GreetingController in such a way that it can read request headers and fill in new field in hello.model.Greeting.
 3 Check that metadata is returned by 'read' request.
 4 Write/Update curl requests to pass this new data.
 5 Provide wireshark screenshots which show request/response pairs for all CRUD methods. Screenshot must contain type of request: get, post, put, delete,
